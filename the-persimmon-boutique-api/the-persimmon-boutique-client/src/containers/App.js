@@ -1,17 +1,27 @@
 import React, { Component } from 'react';
+import Items from './Items.js';
 import './App.css';
+
+
+const items = [
+  (
+    name: "Sweater",
+    price: 30,
+    image: --
+  )
+  (
+    name: "Coffee Mug",
+    price: 15,
+    image: --
+  )
+]
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        App Container
+        <Items items={items}/>
       </div>
     );
   }
