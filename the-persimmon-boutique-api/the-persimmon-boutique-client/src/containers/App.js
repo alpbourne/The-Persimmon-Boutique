@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-import Items from './Items.js';
+import Items from './Items';
 import './App.css';
 
 
 const items = [
-  (
+  {
     name: "Sweater",
     price: 30,
-    image: --
-  )
-  (
+    image: " "
+  },
+  {
     name: "Coffee Mug",
     price: 15,
-    image: --
-  )
+    image: " "
+  }
 ]
 
 class App extends Component {
