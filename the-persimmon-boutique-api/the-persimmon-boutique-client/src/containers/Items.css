@@ -1,9 +1,15 @@
+.ItemsContainer {
+  padding: 16px;
+}
+
 .ItemCard {
+  float: left;
+  margin: 6px;
   background: whitesmoke;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   width: 300px;
-  height: 400px;
+  height: 300px;
 }
 
 .ItemCard:hover {
@@ -12,5 +18,5 @@
 
 .ItemImage {
   width: 70%;
-
+  padding-top: 20px;
 }

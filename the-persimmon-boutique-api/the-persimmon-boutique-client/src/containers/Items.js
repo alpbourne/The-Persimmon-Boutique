@@ -2,7 +2,7 @@ import React from 'react';
 import './Items.css';
 
 const Items = (props) => (
-  <div>
+  <div className="ItemsContainer">
     <h1>Our Collection</h1>
     {props.items.map(item =>
       <div className="ItemCard">
