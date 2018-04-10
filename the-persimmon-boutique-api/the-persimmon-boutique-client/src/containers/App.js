@@ -7,12 +7,12 @@ const items = [
   {
     name: "Sweater",
     price: 30,
-    image: " "
+    image: "https://images.pexels.com/photos/45982/pexels-photo-45982.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
   },
   {
-    name: "Coffee Mug",
+    name: "Heart Shaped Coffee Mug Set",
     price: 15,
-    image: " "
+    image: "https://images.pexels.com/photos/196651/pexels-photo-196651.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
   }
 ]
 
@@ -20,7 +20,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        App Container
         <Items items={items}/>
       </div>
     );
