@@ -12,7 +12,8 @@ class Review extends Component {
     return (
       <div>
         <li>
-          {this.props.review.text}
+          {this.props.review.author}
+          {this.props.review.body}
           <button onClick={() => this.handleOnClick()}>Delete</button>
         </li>
       </div>

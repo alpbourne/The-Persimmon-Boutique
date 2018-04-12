@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Items from './Items';
 import './App.css';
 import ReviewInput from '../components/reviews/ReviewInput';
+import Reviews from '../components/reviews/Reviews';
 
 class App extends Component {
   constructor(props) {
@@ -25,6 +26,7 @@ class App extends Component {
         <Items items={this.state.items}/>
         <h3>Please tell us how we are doing! </h3>
         <ReviewInput store={this.props.store} />
+        <Reviews store={this.props.store}/>
       </div>
     );
   }
