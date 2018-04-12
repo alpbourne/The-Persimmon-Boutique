@@ -7,3 +7,17 @@ class Review extends Component {
       id: this.props.review.id
     });
   }
+
+  render() {
+    return (
+      <div>
+        <li>
+          {this.props.review.text}
+          <button onClick={() => this.handleOnClick()}>Delete</button>
+        </li>
+      </div>
+    );
+  }
+};
+
+export default Review;
