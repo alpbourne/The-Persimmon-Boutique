@@ -14,3 +14,16 @@ class ReviewInput extends Component {
       text: event.target.value,
     });
   }
+
+  handleOnSubmit(event) {
+    event.preventDefault();
+    this.props.store.dispatch({
+      type: 'ADD_REVIEW',
+      review: {
+        text: this.state.text,
+      },
+    });
+    this.setState({
+      text: '',
+    });
+  }
