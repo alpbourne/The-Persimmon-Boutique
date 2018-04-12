@@ -14,6 +14,18 @@ end
     end
   end
 
+  def show
+    render json: @review
+  end
+
+  def update
+    if @review.update(review_params)
+      render json: @review
+    else
+      render json: {message: "Review could not be saved."}, status: 400
+    end
+  end
+
   private
 
   def review_params
