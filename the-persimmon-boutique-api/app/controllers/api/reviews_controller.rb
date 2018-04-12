@@ -1,4 +1,5 @@
 class Api::ReviewsController < ApplicationController
+  before_action :set_review, only: [:show, :update, :destroy]
 
   def index
     render json: Review.all
@@ -24,10 +25,14 @@ end
     else
       render json: {message: "Review could not be saved."}, status: 400
     end
-  end
 
   private
 
   def review_params
     params.require[:review].permit[:author, :body]
   end
+
+  def set_review
+    @review = Review.find_by(id: params[:id])
+  end
+end
