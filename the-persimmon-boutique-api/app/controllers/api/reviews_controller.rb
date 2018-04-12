@@ -25,6 +25,15 @@ end
     else
       render json: {message: "Review could not be saved."}, status: 400
     end
+  end
+
+  def destroy
+    if @review.destroy
+      render json: {message: "Successfully Destroyed!"}, status: 204
+    else
+      render json: {message: "Review could not be removed."}, status: 400
+    end
+  end
 
   private
 
