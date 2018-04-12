@@ -5,13 +5,15 @@ class ReviewInput extends Component {
     super(props);
 
     this.state = {
-      text: '',
+      author: '',
+      body: '',
     };
   }
 
   handleOnChange(event) {
     this.setState({
-      text: event.target.value,
+      author: event.target.value
+      body: event.target.value,
     });
   }
 
@@ -20,11 +22,13 @@ class ReviewInput extends Component {
     this.props.store.dispatch({
       type: 'ADD_REVIEW',
       review: {
-        text: this.state.text,
+        author: this.state.author
+        body: this.state.body,
       },
     });
     this.setState({
-      text: '',
+      author: '',
+      body: '',
     });
   }
 
