@@ -7,12 +7,12 @@ import thunk from 'redux-thunk';
 import cuid from 'cuid';
 export const cuidFn = cuid;
 
-const reviewsReducer = (state = {
+function reviewsReducer(state = {
   reviews: [],
 }, action) {
   switch (action.type) {
     case 'ADD_REVIEW':
-      const review = { text: action.review.text, id: cuidFn() };
+      const review = { author: action.review.author, body: action.review.body, id: cuidFn() };
        return Object.assign({}, state, {
          reviews: state.reviews.concat(review),
        });

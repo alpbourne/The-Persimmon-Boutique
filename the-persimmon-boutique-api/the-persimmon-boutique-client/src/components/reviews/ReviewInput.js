@@ -12,7 +12,7 @@ class ReviewInput extends Component {
 
   handleOnChange(event) {
     this.setState({
-      author: event.target.value
+      author: event.target.value,
       body: event.target.value,
     });
   }
@@ -22,7 +22,7 @@ class ReviewInput extends Component {
     this.props.store.dispatch({
       type: 'ADD_REVIEW',
       review: {
-        author: this.state.author
+        author: this.state.author,
         body: this.state.body,
       },
     });
