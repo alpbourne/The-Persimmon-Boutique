@@ -4,13 +4,21 @@ import {
   combineReducers
 } from 'redux';
 import thunk from 'redux-thunk';
+import cuid from 'cuid';
+export const cuidFn = cuid;
 
-const reviewsReducer = (state = [], action) => {
-  switch(action.type) {
+const reviewsReducer = (state = {
+  reviews: [],
+}, action) {
+  switch (action.type) {
     case 'ADD_REVIEW':
-      return action.item;
+      const review = { text: action.review.text, id: cuidFn() };
+       return Object.assign({}, state, {
+         reviews: state.reviews.concat(review),
+       });
     case 'DELETE_REVIEW':
-      return action.item;
+      const reviews = state.reviews.filter(review => review.id !== action.id);
+      return Object.assign({}, state, { reviews });
     default:
       return state;
   }
