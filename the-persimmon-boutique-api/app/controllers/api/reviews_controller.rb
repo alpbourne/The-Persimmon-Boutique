@@ -4,7 +4,6 @@ class Api::ReviewsController < ApplicationController
   def index
     render json: Review.all
   end
-end
 
   def create
     review = Review.new[review_params]
