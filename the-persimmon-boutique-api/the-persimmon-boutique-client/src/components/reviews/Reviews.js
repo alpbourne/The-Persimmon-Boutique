@@ -15,7 +15,7 @@ class Reviews extends Component {
     return(
       <div className="ReviewsContainer">
         <h2>Reviews</h2>
-        <ul>{reviews}</ul>
+        {reviews}
         <ReviewInput />
       </div>
     );

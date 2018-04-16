@@ -11,11 +11,7 @@ class ReviewCard extends Component {
   render() {
     return (
       <div>
-        <li>
-          <h4>{this.props.review.author}</h4>
-          <p>{this.props.review.body}</p>
-          <button onClick={() => this.handleOnClick()}>Delete</button>
-        </li>
+        <p><b>{this.props.review.author}:</b> {this.props.review.body}<button onClick={() => this.handleOnClick()}>Delete</button></p>
       </div>
     );
   }
