@@ -5,7 +5,7 @@ import './Items.css';
 const Items = (props) => (
   <div className="ItemsContainer">
     <h1>Our Collection</h1>
-    {props.items.map(item => <ItemCard item={item} />)}
+    {props.items.map(item => <ItemCard key={item.id} item={item} />)}
   </div>
 );
 

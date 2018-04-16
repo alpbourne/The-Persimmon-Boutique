@@ -15,3 +15,6 @@ Item.create(name: "3 White Succulent Pots", price: 20, image: "https://images.pe
 Item.create(name: "White Floral Dress", price: 60, image: "https://images.pexels.com/photos/908929/pexels-photo-908929.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
 Item.create(name: "Pink Cake Stand", price: 20, image: "https://images.pexels.com/photos/302561/pexels-photo-302561.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
 Item.create(name: "Gingham Picnic Dress", price: 60, image: "https://images.pexels.com/photos/859191/pexels-photo-859191.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+
+Review.create(author: "Lauren Grace", body: "I always find the cutest gifts at this shop.")
+Review.create(author: "Peyton Lee", body: "I buy all my clothes at The Perisimmon Boutique.")
