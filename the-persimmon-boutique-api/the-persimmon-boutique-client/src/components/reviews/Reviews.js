@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ReviewInput from './ReviewInput';
-import Review from './Review';
+import ReviewCard from './ReviewCard';
+import './Reviews.css';
 
 class Reviews extends Component {
-  this.
-  render()
+  componentDidMount(){
+    
+  }
+  render() {
     return(
       <div className="ReviewsContainer">
         <h2>Reviews</h2>
@@ -17,4 +20,10 @@ class Reviews extends Component {
   }
 };
 
-export default connect()(Reviews);
+const mapStateToProps = (state) => {
+  return ({
+    reviews: state.reviews
+  })
+}
+
+export default connect(mapStateToProps)(Reviews);

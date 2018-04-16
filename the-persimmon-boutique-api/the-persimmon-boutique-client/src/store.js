@@ -4,18 +4,10 @@ import {
   combineReducers
 } from 'redux';
 import thunk from 'redux-thunk';
-import cuid from 'cuid';
-export const cuidFn = cuid;
+import reviews from './reducers/reviews';
+// import cuid from 'cuid';
+// export const cuidFn = cuid;
 
-const reviewsReducer = (state = [], action) => {
-  switch(action.type) {
-    case 'GET_REVIEWS_SUCCESS':
-      return action.reviews;
-
-    default:
-      return state;
-  }
-}
 
 // function reviewsReducer(state = {
 //   reviews: [],
@@ -35,7 +27,7 @@ const reviewsReducer = (state = [], action) => {
 // }
 
 const reducers = combineReducers({
-  reviews: reviewsReducer
+  reviews
 });
 
 const middleware = [thunk];
