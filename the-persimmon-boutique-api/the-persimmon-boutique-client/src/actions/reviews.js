@@ -14,7 +14,7 @@ export const getReviews = () => {
   }
 }
 
-export const updateReviewFormData = review => {
+export const createReview = review => {
   return dispatch => {
     return fetch('http://localhost:3001/api/reviews', {
       method: 'POST',
