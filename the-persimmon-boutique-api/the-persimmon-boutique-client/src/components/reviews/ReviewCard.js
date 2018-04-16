@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Review extends Component {
+class ReviewCard extends Component {
   handleOnClick() {
     this.props.store.dispatch({
       type: 'DELETE_REVIEW',
@@ -12,8 +12,8 @@ class Review extends Component {
     return (
       <div>
         <li>
-          {this.props.review.author}
-          {this.props.review.body}
+          <h4>{this.props.review.author}</h4>
+          <p>{this.props.review.body}</p>
           <button onClick={() => this.handleOnClick()}>Delete</button>
         </li>
       </div>
@@ -21,4 +21,17 @@ class Review extends Component {
   }
 };
 
-export default Review;
+export default ReviewCard;
+
+// import React from 'react';
+//
+// const ReviewCard = ({ review }) => (
+//   <div className="ReviewCard">
+//     <li>
+//       {this.props.review.author}
+//       {this.props.review.body}
+//     </li>
+//   </div>
+// );
+//
+// export default ReviewCard;

@@ -9,7 +9,7 @@ export const getReviews = () => {
   return dispatch => {
     return fetch('http://localhost:3001/api/reviews')
       .then(response => response.json())
-      .then(items => dispatch(setReviews))
+      .then(reviews => dispatch(setReviews(reviews)))
       .catch(error => console.log(error));
   }
 }

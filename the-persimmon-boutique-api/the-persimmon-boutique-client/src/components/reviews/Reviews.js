@@ -7,20 +7,32 @@ import './Reviews.css';
 
 class Reviews extends Component {
   componentDidMount(){
-    this.props.setReviews
+    this.props.getReviews()
   }
   render() {
+    let reviews = this.props && this.props.reviews.length > 0 ?
+      this.props.reviews.map(review => <ReviewCard key={review.id} review={review} />): <span></span>;
     return(
       <div className="ReviewsContainer">
         <h2>Reviews</h2>
-        <ul>
-          {this.props.reviews.map(review => <ReviewCard key={review.id} review={review} />)}
-        </ul>
+        <ul>{reviews}</ul>
         <ReviewInput />
       </div>
     );
   }
 };
+
+  // render() {
+  //   return(
+  //     <div className="ReviewsContainer">
+  //       <h2>Reviews</h2>
+  //       <ul>
+  //         {this.props.reviews.map(review => <ReviewCard key={review.id} review={review} />)}
+  //       </ul>
+  //       <ReviewInput />
+  //     </div>
+  //   );
+  // }
 
 const mapStateToProps = (state) => {
   return ({

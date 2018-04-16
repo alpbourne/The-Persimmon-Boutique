@@ -8,7 +8,8 @@ class App extends Component {
     super(props)
 
     this.state = {
-        items: []
+        items: [],
+        reviews: []
     }
   }
 
