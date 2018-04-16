@@ -4,3 +4,9 @@ export const updateReviewFormData = reviewFormData => {
     reviewFormData
   }
 }
+
+export const resetReviewForm = () => {
+  return {
+    type: "RESET_REVIEW_FORM"
+  }
+}

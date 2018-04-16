@@ -1,7 +1,16 @@
+import { resetReviewForm } from './reviewForm';
+
 const setReviews = reviews => {
   return {
     type: 'GET_REVIEWS_SUCCESS',
     reviews
+  }
+}
+
+const addReview = review => {
+  return {
+    type: 'CREATE_REVIEW_SUCCESS',
+    review
   }
 }
 
@@ -21,11 +30,12 @@ export const createReview = review => {
       headers: {
         'Content-Type': 'application/json'
       },
-      data: JSON.stringify(review)
+      body: JSON.stringify(review)
     })
       .then(response => response.json())
       .then(review => {
-        debugger
+        dispatch(addReview(review))
+        dispatch(resetReviewForm())
       })
       .catch(error => console.log(error));
   }
