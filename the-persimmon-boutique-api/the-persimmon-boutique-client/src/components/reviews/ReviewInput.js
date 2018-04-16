@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class ReviewInput extends Component {
   constructor(props) {
@@ -48,4 +49,9 @@ class ReviewInput extends Component {
   }
 };
 
-export default ReviewInput;
+const mapStateToProps = state => {
+  return {
+    reviewFormData: state.reviewFormData
+  }
+}
+export default connect(mapStateToProps)(ReviewInput);

@@ -5,6 +5,7 @@ import {
 } from 'redux';
 import thunk from 'redux-thunk';
 import reviews from './reducers/reviews';
+import reviewFormData from './reducers/reviewFormData';
 // import cuid from 'cuid';
 // export const cuidFn = cuid;
 
@@ -27,7 +28,8 @@ import reviews from './reducers/reviews';
 // }
 
 const reducers = combineReducers({
-  reviews
+  reviews,
+  reviewFormData
 });
 
 const middleware = [thunk];
