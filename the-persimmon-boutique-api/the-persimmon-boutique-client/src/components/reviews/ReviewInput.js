@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { updateReviewFormData } from '../../actions/reviewForm';
+import { createReview } from '../../actions/reviews';
 
 class ReviewInput extends Component {
   // constructor(props) {
@@ -24,8 +25,9 @@ class ReviewInput extends Component {
     // });
   }
 
-  // handleOnSubmit(event) {
-  //   event.preventDefault();
+  handleOnSubmit = event => {
+    event.preventDefault();
+    this.props.createReview(this.props.reviewFormData)
   //   this.props.store.dispatch({
   //     type: 'ADD_REVIEW',
   //     review: {
@@ -37,14 +39,14 @@ class ReviewInput extends Component {
   //     author: '',
   //     body: '',
   //   });
-  // }
+  }
 
   render() {
     const {author, body} = this.props.reviewFormData;
     return (
       <div>
         <h3>Please tell us how we are doing! </h3>
-        <form onSubmit={(event) => this.handleOnSubmit(event)}>
+        <form onSubmit={this.handleOnSubmit}>
           <div>
             <label htmlFor="author">Author:</label>
             <input type="text" name="author" value={author} onChange={this.handleOnChange} />
@@ -65,4 +67,7 @@ const mapStateToProps = state => {
     reviewFormData: state.reviewFormData
   }
 }
-export default connect(mapStateToProps, { updateReviewFormData })(ReviewInput);
+export default connect(mapStateToProps, {
+  updateReviewFormData,
+  createReview
+})(ReviewInput);

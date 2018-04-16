@@ -13,3 +13,20 @@ export const getReviews = () => {
       .catch(error => console.log(error));
   }
 }
+
+export const updateReviewFormData = review => {
+  return dispatch => {
+    return fetch('http://localhost:3001/api/reviews', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      data: JSON.stringify(review)
+    })
+      .then(response => response.json())
+      .then(review => {
+        debugger
+      })
+      .catch(error => console.log(error));
+  }
+}
