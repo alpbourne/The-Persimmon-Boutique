@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { updateReviewFormData } from '../../actions/reviews';
 
 class ReviewInput extends Component {
   // constructor(props) {
@@ -11,13 +12,18 @@ class ReviewInput extends Component {
   //   };
   // }
   //
-  // handleOnChange(event) {
-  //   this.setState({
-  //     author: event.target.value,
-  //     body: event.target.value,
-  //   });
-  // }
-  //
+  handleOnChange = event => {
+    const {name, value } = event.target;
+    const currentReviewFormData = Object.assign({}, this.props.reviewFormData,{
+      [name]: value
+    })
+    this.props.updateReviewFormData(currentReviewFormData)
+    // this.setState({
+    //   author: event.target.value,
+    //   body: event.target.value,
+    // });
+  }
+
   // handleOnSubmit(event) {
   //   event.preventDefault();
   //   this.props.store.dispatch({
@@ -41,11 +47,11 @@ class ReviewInput extends Component {
         <form onSubmit={(event) => this.handleOnSubmit(event)}>
           <div>
             <label htmlFor="author">Author:</label>
-            <input type="text" name="author" value={author} onChange={(event) => this.handleOnChange(event)} />
+            <input type="text" name="author" value={author} onChange={this.handleOnChange} />
           </div>
           <div>
             <label htmlFor="body">Review:</label>
-            <input type="text" name="body" value={body} onChange={(event) => this.handleOnChange(event)} />
+            <input type="text" name="body" value={body} onChange={this.handleOnChange} />
           </div>
           <input type="submit" />
         </form>
