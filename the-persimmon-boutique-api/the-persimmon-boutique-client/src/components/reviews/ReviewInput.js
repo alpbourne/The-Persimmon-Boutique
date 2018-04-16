@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { updateReviewFormData } from '../../actions/reviews';
+import { updateReviewFormData } from '../../actions/reviewForm';
 
 class ReviewInput extends Component {
   // constructor(props) {
@@ -53,7 +53,7 @@ class ReviewInput extends Component {
             <label htmlFor="body">Review:</label>
             <input type="text" name="body" value={body} onChange={this.handleOnChange} />
           </div>
-          <input type="submit" />
+          <button type="submit">Add Review</button>
         </form>
       </div>
     );
@@ -65,4 +65,4 @@ const mapStateToProps = state => {
     reviewFormData: state.reviewFormData
   }
 }
-export default connect(mapStateToProps)(ReviewInput);
+export default connect(mapStateToProps, { updateReviewFormData })(ReviewInput);

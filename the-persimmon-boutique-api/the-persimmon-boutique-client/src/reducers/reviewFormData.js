@@ -4,7 +4,7 @@ export default (state = {
 }, action) => {
   switch(action.type) {
     case 'UPDATED_DATA':
-      return action.itemFormData
+      return action.reviewFormData
     default:
       return state;
   }
