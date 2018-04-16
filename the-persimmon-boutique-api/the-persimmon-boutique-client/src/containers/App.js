@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Items from './Items';
 import './App.css';
-import ReviewInput from '../components/reviews/ReviewInput';
 import Reviews from '../components/reviews/Reviews';
 
 class App extends Component {
@@ -24,7 +23,6 @@ class App extends Component {
     return (
       <div className="App">
         <Items items={this.state.items}/>
-        <ReviewInput store={this.props.store} />
         <Reviews store={this.props.store}/>
       </div>
     );
