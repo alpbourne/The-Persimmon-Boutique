@@ -35,6 +35,7 @@ class ReviewInput extends Component {
   render() {
     return (
       <div>
+        <h3>Please tell us how we are doing! </h3>
         <form onSubmit={(event) => this.handleOnSubmit(event)}>
           <label htmlFor="author">Author:</label>
           <input type="text" value={this.state.author} onChange={(event) => this.handleOnChange(event)} />
