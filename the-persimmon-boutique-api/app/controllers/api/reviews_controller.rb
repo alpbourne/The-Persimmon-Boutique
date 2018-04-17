@@ -6,7 +6,7 @@ class Api::ReviewsController < ApplicationController
   end
 
   def create
-    review = Review.new[review_params]
+    review = Review.new(review_params)
     if review.save
       render json: review
     else
@@ -37,7 +37,7 @@ class Api::ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require[:review].permit[:author, :body]
+    params.require(:review).permit(:author, :body)
   end
 
   def set_review

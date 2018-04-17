@@ -24,13 +24,14 @@ export const getReviews = () => {
 }
 
 export const createReview = review => {
+  debugger
   return dispatch => {
     return fetch('http://localhost:3001/api/reviews', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(review)
+      body: JSON.stringify({review: review})
     })
       .then(response => response.json())
       .then(review => {
