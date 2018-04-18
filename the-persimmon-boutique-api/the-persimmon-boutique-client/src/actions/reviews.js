@@ -48,14 +48,13 @@ export const createReview = review => {
   }
 }
 
-export const deleteReview = reviewId => {
+export const deleteReview = review => {
   return dispatch => {
-    return fetch('http://localhost:3001/api/reviews/%{reviewId}', {
+    return fetch(`http://localhost:3001/api/reviews/${review.id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({review: reviewId})
     })
       .then(response => response.json())
       .then(review => {

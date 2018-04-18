@@ -6,9 +6,14 @@ class Review extends Component {
   // }
 
   render() {
+    const { review, deleteReview } = this.props
     return (
       <div>
-        <p><b>{this.props.review.author}:</b> {this.props.review.body}<button onClick={() => this.props.deleteReview()}>Delete</button></p>
+        <p>
+          <b>{review.author}:</b>
+          {review.body}
+          <button onClick={() => deleteReview(review)}>Delete</button>
+        </p>
       </div>
     );
   }

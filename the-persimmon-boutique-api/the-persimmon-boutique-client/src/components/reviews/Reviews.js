@@ -19,7 +19,7 @@ class Reviews extends Component {
     //   return <ReviewCard text={review.text} key={index} id={review.id} review={review} store={this.props.store} />
     // });
     let reviews = this.props && this.props.reviews.length > 0 ?
-      this.props.reviews.map(review => <Review key={review.id} review={review}/>): <span></span>;
+      this.props.reviews.map(review => <Review key={review.id} review={review} deleteReview={this.handleDeleteReview}/>): <span></span>;
     return(
       <div className="ReviewsContainer">
         <h2>Reviews</h2>
@@ -48,4 +48,4 @@ const mapStateToProps = (state) => {
   })
 }
 
-export default connect(mapStateToProps, { getReviews })(Reviews);
+export default connect(mapStateToProps, { getReviews, deleteReview })(Reviews);
