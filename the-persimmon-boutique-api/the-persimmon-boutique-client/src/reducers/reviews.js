@@ -6,6 +6,10 @@ export default (state = [], action) => {
     case 'CREATE_REVIEW_SUCCESS':
       return state.concat(action.review);
 
+    case 'DELETE_REVIEW':
+      const reviews = state.filter(review => review.id !== action.id);
+      return reviews
+
     default:
       return state;
   }

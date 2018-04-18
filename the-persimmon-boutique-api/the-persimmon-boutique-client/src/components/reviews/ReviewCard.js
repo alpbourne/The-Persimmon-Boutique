@@ -8,7 +8,7 @@ class ReviewCard extends Component {
   render() {
     return (
       <div>
-        <p><b>{this.props.review.author}:</b> {this.props.review.body}<button onClick={() => {this.handleOnClick(review)}}>Delete</button></p>
+        <p><b>{this.props.review.author}:</b> {this.props.review.body}<button onClick={(review) => {this.handleOnClick(review)}}>Delete</button></p>
       </div>
     );
   }

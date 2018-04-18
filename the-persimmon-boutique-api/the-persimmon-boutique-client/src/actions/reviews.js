@@ -14,6 +14,13 @@ const addReview = review => {
   }
 }
 
+const removeReview = review => {
+  return {
+    type: 'DELETE_REVIEW',
+    id: review
+  }
+}
+
 export const getReviews = () => {
   return dispatch => {
     return fetch('http://localhost:3001/api/reviews')
@@ -36,6 +43,23 @@ export const createReview = review => {
       .then(review => {
         dispatch(addReview(review))
         dispatch(resetReviewForm())
+      })
+      .catch(error => console.log(error));
+  }
+}
+
+export const deleteReview = reviewId => {
+  return dispatch => {
+    return fetch('http://localhost:3001/api/reviews/%{reviewId}', {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({review: reviewId})
+    })
+      .then(response => response.json())
+      .then(review => {
+        dispatch(removeReview(review))
       })
       .catch(error => console.log(error));
   }

@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ReviewInput from './ReviewInput';
 import ReviewCard from './ReviewCard';
-import { getReviews } from '../../actions/reviews';
+import { getReviews, deleteReview } from '../../actions/reviews';
 import './Reviews.css';
 
 class Reviews extends Component {
-  componentDidMount(){
-    this.props.getReviews()
-  }
-
   handleDeleteReview = (review) => {
     this.props.deleteReview(review)
+  }
+  
+  componentDidMount(){
+    this.props.getReviews()
   }
 
   render() {
