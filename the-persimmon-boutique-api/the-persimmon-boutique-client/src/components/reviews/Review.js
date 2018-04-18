@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 
-class ReviewCard extends Component {
-  handleOnClick = (review) => {
-    this.props.deleteReview(review);
-  }
+class Review extends Component {
+  // handleOnClick = (review) => {
+  //   this.props.deleteReview(review.id);
+  // }
 
   render() {
     return (
       <div>
-        <p><b>{this.props.review.author}:</b> {this.props.review.body}<button onClick={(review) => {this.handleOnClick(review)}}>Delete</button></p>
+        <p><b>{this.props.review.author}:</b> {this.props.review.body}<button onClick={() => this.handleOnClick()}>Delete</button></p>
       </div>
     );
   }
 };
 
-export default ReviewCard;
+export default Review;
 
 // import React from 'react';
 //

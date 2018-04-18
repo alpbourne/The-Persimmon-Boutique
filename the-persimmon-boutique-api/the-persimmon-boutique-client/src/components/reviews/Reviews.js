@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ReviewInput from './ReviewInput';
-import ReviewCard from './ReviewCard';
+import Review from './Review';
 import { getReviews, deleteReview } from '../../actions/reviews';
 import './Reviews.css';
 
@@ -9,7 +9,7 @@ class Reviews extends Component {
   handleDeleteReview = (review) => {
     this.props.deleteReview(review)
   }
-  
+
   componentDidMount(){
     this.props.getReviews()
   }
@@ -19,7 +19,7 @@ class Reviews extends Component {
     //   return <ReviewCard text={review.text} key={index} id={review.id} review={review} store={this.props.store} />
     // });
     let reviews = this.props && this.props.reviews.length > 0 ?
-      this.props.reviews.map(review => <ReviewCard key={review.id} review={review} deleteReview={this.handleDeleteReview}/>): <span></span>;
+      this.props.reviews.map(review => <Review key={review.id} review={review} deleteReview={this.handleDeleteReview}/>): <span></span>;
     return(
       <div className="ReviewsContainer">
         <h2>Reviews</h2>
