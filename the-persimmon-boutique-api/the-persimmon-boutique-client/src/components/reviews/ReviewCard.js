@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
 
 class ReviewCard extends Component {
-  handleOnClick() {
-    this.props.store.dispatch({
-      type: 'DELETE_REVIEW',
-      id: this.props.review.id
-    });
+  handleOnClick = (review) => {
+    this.props.deleteReview(review);
   }
 
   render() {
     return (
       <div>
-        <p><b>{this.props.review.author}:</b> {this.props.review.body}<button onClick={() => this.handleOnClick()}>Delete</button></p>
+        <p><b>{this.props.review.author}:</b> {this.props.review.body}<button onClick={() => {this.handleOnClick(review)}}>Delete</button></p>
       </div>
     );
   }
