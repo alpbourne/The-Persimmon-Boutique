@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import Items from './Items';
-import './App.css';
-import Reviews from '../components/reviews/Reviews';
+import Home from './Home';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
   constructor(props) {
