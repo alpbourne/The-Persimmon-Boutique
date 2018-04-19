@@ -1,5 +1,10 @@
+h2 {
+  color: gray;
+  text-align: center;
+}
+
 .AboutContainer{
-  padding-top: 50px;
+  padding-top: 10px;
 }
 
 .AboutCard {
@@ -8,7 +13,7 @@
   margin: auto;
   background: whitesmoke;
   box-shadow: 0 3px 6px #E54848, 0 3px 6px rgba(0,0,0,0.23);
-  width: 70%;
+  width: 55%;
   height: 200px;
   padding-bottom: 10px;
 }
