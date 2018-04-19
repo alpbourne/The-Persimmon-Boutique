@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Items from './Items';
-import './App.css';
+import Items from '../containers/Items';
+import '../containers/App.css';
 import Reviews from '../components/reviews/Reviews';
 
 class Home extends Component {
