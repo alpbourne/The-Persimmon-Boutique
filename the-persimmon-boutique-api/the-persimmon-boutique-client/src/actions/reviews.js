@@ -17,7 +17,7 @@ const addReview = review => {
 const removeReview = review => {
   return {
     type: 'DELETE_REVIEW',
-    id: review
+    review
   }
 }
 
@@ -54,12 +54,10 @@ export const deleteReview = review => {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json'
-      },
+      }
     })
       .then(response => response.json())
-      .then(review => {
-        dispatch(removeReview(review))
-      })
+      .then(review => dispatch(removeReview(review)))
       .catch(error => console.log(error));
   }
 }

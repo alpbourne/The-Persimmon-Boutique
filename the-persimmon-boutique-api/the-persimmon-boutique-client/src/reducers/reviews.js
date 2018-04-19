@@ -7,7 +7,7 @@ export default (state = [], action) => {
       return state.concat(action.review);
 
     case 'DELETE_REVIEW':
-      const reviews = state.filter(review => review.id !== action.id);
+      const reviews = state.filter(review => review.id !== action.review.id);
       return reviews
 
     default:

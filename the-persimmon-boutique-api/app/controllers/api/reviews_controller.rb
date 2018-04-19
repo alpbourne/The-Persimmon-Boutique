@@ -28,7 +28,7 @@ class Api::ReviewsController < ApplicationController
 
   def destroy
     if @review.destroy
-      render json: {message: "Successfully Destroyed!"}, status: 204
+      render json: @review
     else
       render json: {message: "Review could not be removed."}, status: 400
     end
