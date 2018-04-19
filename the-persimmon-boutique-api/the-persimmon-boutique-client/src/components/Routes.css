@@ -1,0 +1,14 @@
+.AboutContainer{
+  padding-top: 50px;
+}
+
+.AboutCard {
+  padding: 16px;
+  float: center;
+  margin: auto;
+  background: whitesmoke;
+  box-shadow: 0 3px 6px #E54848, 0 3px 6px rgba(0,0,0,0.23);
+  width: 70%;
+  height: 200px;
+  padding-bottom: 10px;
+}
