@@ -3,12 +3,9 @@ import '../containers/Items.css';
 
 const ItemCard = ({ item }) => (
   <div className="ItemCard">
-    <img className="ItemImage" src={item.image} alt={item.name} />
+    <img className="ItemImage" src={item.image} alt={item.name} width={275} height={200}/>
     <h3>{item.name}</h3>
     <p>Price: ${item.price}</p>
-    <div className="btn-wishlist">
-      <button onClick={() => this.props.addToWishlist()}>Add to Wishlist</button>
-    </div>
   </div>
 )
 
