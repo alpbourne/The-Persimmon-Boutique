@@ -3,6 +3,7 @@ import './Routes.css';
 
 const About = () => {
   return (
+    <img src={'./contact-page.jpg'}/>
     <div className="ContactContainer">
       <h2>Contact Us</h2>
       <div className="ContactCard">
