@@ -1,10 +1,11 @@
 import React from 'react';
 import './Routes.css';
+import contactPage from './contactPage.jpg'
 
 const About = () => {
   return (
-    <img src={'./contact-page.jpg'}/>
     <div className="ContactContainer">
+      <img width={900} height={500} alt="" src={contactPage} />
       <h2>Contact Us</h2>
       <div className="ContactCard">
         <p><b>Address: </b>1 Main Street, Gerber, MD 23456</p>
