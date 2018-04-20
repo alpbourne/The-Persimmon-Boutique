@@ -29,6 +29,14 @@ const NavBar = () => {
           background: 'gray'
         }}
       >About</NavLink>
+      <NavLink
+        to="/contact"
+        exact
+        style={link}
+        activeStyle={{
+          background: 'gray'
+        }}
+      >Contact</NavLink>
     </div>
   );
 };
