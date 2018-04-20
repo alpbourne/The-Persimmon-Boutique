@@ -2,12 +2,13 @@ import React from 'react';
 import './Routes.css';
 import contactPage from './contactPage.jpg'
 
-const About = () => {
+const Contact = () => {
   return (
     <div className="ContactContainer">
-      <img width={900} height={500} alt="" src={contactPage} />
+
       <h2>Contact Us</h2>
       <div className="ContactCard">
+        <img width={598} height={300} alt="We Are Open" src={contactPage} />
         <p><b>Address: </b>1 Main Street, Gerber, MD 23456</p>
         <p><b>Email Address: </b>ThePersimmonBoutique@gmail.com</p>
         <p><b>Facebook Page: </b>The Persimmon Boutique</p>
@@ -18,4 +19,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Contact;
