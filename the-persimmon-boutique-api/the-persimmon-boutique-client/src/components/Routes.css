@@ -3,11 +3,26 @@ h2 {
   text-align: center;
 }
 
-.AboutContainer{
+.AboutContainer {
   padding-top: 10px;
 }
 
 .AboutCard {
+  padding: 16px;
+  float: center;
+  margin: auto;
+  background: whitesmoke;
+  box-shadow: 0 3px 6px #E54848, 0 3px 6px rgba(0,0,0,0.23);
+  width: 55%;
+  height: 200px;
+  padding-bottom: 10px;
+}
+
+.ContactContainer {
+  padding-top: 10px;
+}
+
+.ContactCard {
   padding: 16px;
   float: center;
   margin: auto;
