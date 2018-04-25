@@ -2,7 +2,7 @@
 
 ## About
 
-The Persimmon Boutique is a website designed for small businesses that have store fronts and want to enhance their online appearance. This application can be easily styled and adjusted to meet the needs of a business.
+The Persimmon Boutique is a website designed for small businesses that have store fronts and want to enhance their online appearance. It has a Rails backend API and a React.js & Redux frontend. This application can be easily styled and adjusted to meet the needs of a business.
 
 ## Installation & Usage
 
