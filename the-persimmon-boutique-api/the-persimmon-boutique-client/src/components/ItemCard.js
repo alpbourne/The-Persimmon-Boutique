@@ -7,8 +7,12 @@ class ItemCard extends Component {
   //   counter: 0
   // };
 
-  handleOnClick = event => {
-    this.setState({counter: this.state.counter + 1})
+  // handleOnClick = event => {
+  //   this.setState({counter: this.state.counter + 1})
+  // }
+
+  handleOnClick = like => {
+    this.props.increaseLikes(like)
   }
 
   render() {
