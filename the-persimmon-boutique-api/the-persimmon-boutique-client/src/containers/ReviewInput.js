@@ -4,9 +4,16 @@ import { updateReviewFormData } from '../actions/reviewForm';
 import { createReview } from '../actions/reviews';
 
 class ReviewInput extends Component {
-
+  // state = {
+  //   author: ''
+  //   body: ''
+  // }
   handleOnChange = event => {
     const {name, value } = event.target;
+
+    // this.setState({
+    //   [name]: value
+    // })
     const currentReviewFormData = Object.assign({}, this.props.reviewFormData,{
       [name]: value
     })

@@ -1,5 +1,6 @@
 import { resetReviewForm } from './reviewForm';
 
+//Action Creators
 const setReviews = reviews => {
   return {
     type: 'GET_REVIEWS_SUCCESS',
@@ -21,6 +22,7 @@ const removeReview = review => {
   }
 }
 
+//Asynchronous Actions
 export const getReviews = () => {
   return dispatch => {
     return fetch('http://localhost:3001/api/reviews')
