@@ -15,9 +15,6 @@ class Reviews extends Component {
   }
 
   render() {
-    // const reviews = this.props.store.getState().reviews.map((review, index) => {
-    //   return <ReviewCard text={review.text} key={index} id={review.id} review={review} store={this.props.store} />
-    // });
     let reviews = this.props && this.props.reviews.length > 0 ?
       this.props.reviews.map(review => <Review key={review.id} review={review} deleteReview={this.handleDeleteReview}/>): <span></span>;
     return(
@@ -29,18 +26,6 @@ class Reviews extends Component {
     );
   }
 };
-
-  // render() {
-  //   return(
-  //     <div className="ReviewsContainer">
-  //       <h2>Reviews</h2>
-  //       <ul>
-  //         {this.props.reviews.map(review => <ReviewCard key={review.id} review={review} />)}
-  //       </ul>
-  //       <ReviewInput />
-  //     </div>
-  //   );
-  // }
 
 const mapStateToProps = (state) => {
   return ({
