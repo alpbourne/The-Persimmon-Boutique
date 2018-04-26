@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { updateReviewFormData } from '../../actions/reviewForm';
-import { createReview } from '../../actions/reviews';
+import { updateReviewFormData } from '../actions/reviewForm';
+import { createReview } from '../actions/reviews';
 
 class ReviewInput extends Component {
 

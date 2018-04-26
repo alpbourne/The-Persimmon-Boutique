@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ReviewInput from './ReviewInput';
-import Review from './Review';
-import { getReviews, deleteReview } from '../../actions/reviews';
-import './Reviews.css';
+import Review from '../components/reviews/Review';
+import { getReviews, deleteReview } from '../actions/reviews';
+import '../components/reviews/Reviews.css';
 
 class Reviews extends Component {
   handleDeleteReview = (review) => {

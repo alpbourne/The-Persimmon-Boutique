@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Items from '../containers/Items';
 import '../containers/App.css';
-import Reviews from '../components/reviews/Reviews';
+import Reviews from '../containers/Reviews';
 
 class Home extends Component {
   constructor(props) {
