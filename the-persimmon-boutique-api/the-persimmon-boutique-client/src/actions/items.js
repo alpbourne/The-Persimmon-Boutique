@@ -14,7 +14,7 @@ export const increaseLikes = like => {
       }
     })
       .then(response => response.json())
-      .then(review => dispatch(increaseLikeCount(like)))
+      .then(like => dispatch(increaseLikeCount(like)))
       .catch(error => console.log(error));
   }
 }
