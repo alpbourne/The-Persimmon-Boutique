@@ -8,7 +8,7 @@ const increaseLikeCount = like => {
 export const increaseLikes = like => {
   return dispatch => {
     return fetch(`http://localhost:3001/api/items/${item.id}`, {
-      method: 'POST',
+      method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
       }

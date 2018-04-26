@@ -18,13 +18,15 @@ class Api::ItemsController < ApplicationController
     render json: @item
   end
 
-  # def update
-  #   if @item.update(item_params)
-  #     render json: @item
-  #   else
-  #     render json: {message: "Item could not be saved."}, status: 400
-  #   end
-  # end
+  def update
+    @item.like_count += 1
+    @item.save
+    if @item.save
+      render json: @item
+    else
+      render json: {message: "Item like count could not be saved."}, status: 400
+    end
+  end
   #
   # def destroy
   #   if @item.destroy
