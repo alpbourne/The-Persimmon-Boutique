@@ -4,41 +4,18 @@ import { updateReviewFormData } from '../../actions/reviewForm';
 import { createReview } from '../../actions/reviews';
 
 class ReviewInput extends Component {
-  // constructor(props) {
-  //   super(props);
-  //
-  //   this.state = {
-  //     author: '',
-  //     body: '',
-  //   };
-  // }
-  //
+
   handleOnChange = event => {
     const {name, value } = event.target;
     const currentReviewFormData = Object.assign({}, this.props.reviewFormData,{
       [name]: value
     })
     this.props.updateReviewFormData(currentReviewFormData)
-    // this.setState({
-    //   author: event.target.value,
-    //   body: event.target.value,
-    // });
   }
 
   handleOnSubmit = event => {
     event.preventDefault();
     this.props.createReview(this.props.reviewFormData)
-  //   this.props.store.dispatch({
-  //     type: 'ADD_REVIEW',
-  //     review: {
-  //       author: this.state.author,
-  //       body: this.state.body,
-  //     },
-  //   });
-  //   this.setState({
-  //     author: '',
-  //     body: '',
-  //   });
   }
 
   render() {
