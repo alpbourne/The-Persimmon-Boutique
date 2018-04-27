@@ -23,7 +23,7 @@ class ItemCard extends Component {
         <img className="ItemImage" src={image} alt={name} width={275} height={200}/>
         <h3>{name}</h3>
         <p>Price: ${price}</p>
-        <button onClick={this.handleOnClick}>Like</button>
+        <button onClick={() => this.handleOnClick(this.props.item)}>Like</button>
         Counter: {like_count}
       </div>
     )

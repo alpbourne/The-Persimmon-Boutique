@@ -1,5 +1,5 @@
 class Api::ItemsController < ApplicationController
-  before_action :set_item, only: [:show, :destroy]
+  before_action :set_item, only: [:show, :update, :destroy]
 
   def index
     render json: Item.all
@@ -19,10 +19,8 @@ class Api::ItemsController < ApplicationController
   end
 
   def update
-    item = Item.find_by(id: params[:id])
-    item.like_count += 1
-    item.save
-    if item.save
+    @item.like_count += 1
+    if @item.save
       render json: @item
     else
       render json: {message: "Item like count could not be saved."}, status: 400
@@ -40,7 +38,7 @@ class Api::ItemsController < ApplicationController
 
   private
     def item_params
-      params.require[:item].permit[:name, :price, :image, :like_count]
+      params.require(:item).permit(:name, :price, :image, :like_count)
     end
 
     def set_item
