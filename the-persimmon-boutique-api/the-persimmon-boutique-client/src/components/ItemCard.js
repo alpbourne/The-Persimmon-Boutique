@@ -38,14 +38,14 @@ const mapStateToProps = state => {
 
 export default connect(mapStateToProps, {increaseLikes})(ItemCard);
 
-//
-// } ({ item }) => (
+// const ItemCard = ({ item }) => (
 //   <div className="ItemCard">
 //     <img className="ItemImage" src={item.image} alt={item.name} width={275} height={200}/>
 //     <h3>{item.name}</h3>
 //     <p>Price: ${item.price}</p>
-//     <button onSubmit={this.handleOnSubmit}>Like</button>
+//     <button onClick={this.handleOnClick}>Like</button>
+//     Counter: {item.like_count}
 //   </div>
-// )
-
+// // )
+//
 // export default ItemCard;
