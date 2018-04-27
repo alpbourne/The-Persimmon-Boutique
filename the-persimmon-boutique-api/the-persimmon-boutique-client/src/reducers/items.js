@@ -1,7 +1,7 @@
 export default (state = [], action) => {
   switch(action.type) {
     case 'INCREASE_LIKES':
-      return action.like;
+      return action.item;
     default:
       return state;
   }

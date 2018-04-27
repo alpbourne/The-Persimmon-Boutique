@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import '../containers/Items.css';
+import { increaseLikes } from '../actions/items';
 
 class ItemCard extends Component {
   // state = {
@@ -11,8 +12,8 @@ class ItemCard extends Component {
   //   this.setState({counter: this.state.counter + 1})
   // }
 
-  handleOnClick = like => {
-    this.props.increaseLikes(like)
+  handleOnClick = item => {
+    this.props.increaseLikes(item)
   }
 
   render() {
@@ -31,11 +32,11 @@ class ItemCard extends Component {
 
 const mapStateToProps = state => {
   return {
-    itemCount: state.itemCount
+    items: state.items
   }
 }
 
-export default connect(mapStateToProps)(ItemCard);
+export default connect(mapStateToProps, {increaseLikes})(ItemCard);
 
 //
 // } ({ item }) => (

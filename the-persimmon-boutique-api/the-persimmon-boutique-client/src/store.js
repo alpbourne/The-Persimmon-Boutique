@@ -6,10 +6,12 @@ import {
 import thunk from 'redux-thunk';
 import reviews from './reducers/reviews';
 import reviewFormData from './reducers/reviewFormData';
+import items from './reducers/items';
 
 const reducers = combineReducers({
   reviews,
-  reviewFormData
+  reviewFormData,
+  items
 });
 
 const middleware = [thunk];
