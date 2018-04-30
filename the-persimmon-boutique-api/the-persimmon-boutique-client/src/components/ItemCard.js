@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import '../containers/Items.css';
-import { increaseLikes } from '../actions/items';
+import { getItems, increaseLikes } from '../actions/items';
 
 class ItemCard extends Component {
+
+  // componentDidMount() {
+  //   this.props.getItems()
+  // }
   // state = {
   //   counter: 0
   // };
@@ -31,12 +35,12 @@ class ItemCard extends Component {
 };
 
 const mapStateToProps = state => {
-  return {
+  return ({
     items: state.items
-  }
+  })
 }
 
-export default connect(mapStateToProps, {increaseLikes})(ItemCard);
+export default connect(mapStateToProps, { getItems, increaseLikes })(ItemCard);
 
 // const ItemCard = ({ item }) => (
 //   <div className="ItemCard">
