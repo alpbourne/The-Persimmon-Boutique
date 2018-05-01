@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import '../containers/Items.css';
-import { getItems, increaseLikes } from '../actions/items';
+import { increaseLikes } from '../actions/items';
 
 class ItemCard extends Component {
 
@@ -28,7 +28,7 @@ class ItemCard extends Component {
         <h3>{name}</h3>
         <p>Price: ${price}</p>
         <button onClick={() => this.handleOnClick(this.props.item)}>Like</button>
-        Counter: {like_count}
+        {like_count}
       </div>
     )
   }
@@ -40,7 +40,7 @@ const mapStateToProps = state => {
   })
 }
 
-export default connect(mapStateToProps, { getItems, increaseLikes })(ItemCard);
+export default connect(mapStateToProps, { increaseLikes })(ItemCard);
 
 // const ItemCard = ({ item }) => (
 //   <div className="ItemCard">

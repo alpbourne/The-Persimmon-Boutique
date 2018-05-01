@@ -4,8 +4,8 @@ export default (state = [], action) => {
       return action.items;
 
     case 'INCREASE_LIKES':
-      const items = this.state.items.filter(item => item.id !== action.item.id);
-      return Object.assign(items, action.item);
+      const items = state.filter(item => item.id !== action.item.id);
+      return [...items, action.item];
 
     default:
       return state;
