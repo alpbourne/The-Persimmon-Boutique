@@ -16,6 +16,22 @@ class ItemCard extends Component {
   //   this.setState({counter: this.state.counter + 1})
   // }
 
+  // callApi = () => {
+  //   console.log('a')
+  //   fetch('http://localhost:3001/api/items')
+  //   .then(response => {
+  //     console.log('b')
+  //     return response.json()
+  //   })
+  //   .then(items => console.log('c', items))
+  //   .catch(err => console.log('d', err))
+  //   console.log('e')
+  //
+  //   // a e b c
+  // }
+  // <button onClick={() => this.callApi()}>Call Api</button>
+
+
   handleOnClick = item => {
     this.props.increaseLikes(item)
   }
