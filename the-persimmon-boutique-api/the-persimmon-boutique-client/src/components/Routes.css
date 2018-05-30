@@ -5,32 +5,39 @@ h2 {
 
 .AboutContainer {
   padding-top: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .AboutCard {
-  padding: 16px;
+  padding: 20px;
   float: center;
   margin: auto;
   background: whitesmoke;
   box-shadow: 0 3px 6px #E54848, 0 3px 6px rgba(0,0,0,0.23);
   width: 55%;
-  height: 515px;
-  padding-bottom: 10px;
+  height: 85%;
+}
+
+.AboutImage {
+  width: 100%;
 }
 
 .ContactContainer {
   padding-top: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .ContactCard {
-  padding: 16px;
+  padding: 20px;
   float: center;
   margin: auto;
   background: whitesmoke;
   box-shadow: 0 3px 6px #E54848, 0 3px 6px rgba(0,0,0,0.23);
   width: 55%;
-  height: 500px;
+  height: 85%;
   padding-bottom: 10px;
+}
+
+.ContactImage {
+  width: 100%;
 }
